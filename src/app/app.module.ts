@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { HeaderComponent } from './header/header/header.component';
     MatButtonModule,
     MatCardModule,
     MatInputModule,
+    MatSliderModule,
     MatToolbarModule,
   ],
   providers: [],
