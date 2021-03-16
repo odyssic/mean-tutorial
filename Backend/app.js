@@ -7,7 +7,7 @@ app.use((req, res, next) => {
     next();
 });
 app.use((req, res, next) => {
-    console.log("Hello from express");
+    res.send("Hello from express");
 });
 
 module.exports = app;
