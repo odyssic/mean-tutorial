@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import { Subscription } from 'rxjs';
 
-=======
->>>>>>> 261a1d25e2e0ba9633d1b3f8ce8f78995dd52c5e
 import { PostsService } from './../../posts.service';
 import { Post } from './../../post.model';
 
@@ -13,7 +10,6 @@ import { Post } from './../../post.model';
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.css'],
 })
-<<<<<<< HEAD
 export class PostListComponent implements OnInit, OnDestroy {
   posts: Post[] = [];
   postsSub: Subscription;
@@ -21,7 +17,7 @@ export class PostListComponent implements OnInit, OnDestroy {
   constructor(public postsService: PostsService) {}
 
   ngOnInit() {
-    this.posts = this.postsService.getPosts();
+    this.postsService.getPosts();
     this.postsSub = this.postsService
       .getPostUpdateListener()
       .subscribe((posts: Post[]) => {
@@ -31,10 +27,4 @@ export class PostListComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.postsSub.unsubscribe();
   }
-=======
-export class PostListComponent {
-  @Input() posts: Post[] = [];
-
-  constructor(public postsService: PostsService) {}
->>>>>>> 261a1d25e2e0ba9633d1b3f8ce8f78995dd52c5e
 }
